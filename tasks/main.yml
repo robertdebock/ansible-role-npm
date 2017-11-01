@@ -1,0 +1,5 @@
+---
+# tasks file for npm
+- name: install npm
+  yum:
+    name: nodejs

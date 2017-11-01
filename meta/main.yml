@@ -1,0 +1,19 @@
+galaxy_info:
+  author: Robert de Bock
+  description: Have npm available.
+  license: Apache License, Version 2.0
+  min_ansible_version: 1.2
+  min_ansible_container_version: 0.2.0
+
+  platforms:
+  - name: EL
+    versions:
+    - 7
+    - 6
+
+  galaxy_tags:
+    - npm
+    - nodejs
+
+dependencies:
+  - robertdebock.epel
