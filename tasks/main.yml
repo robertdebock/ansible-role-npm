@@ -1,6 +1,17 @@
 ---
 # tasks file for npm
-- name: install npm
+- name: install npm on centos 6
+  package:
+    name: npm
+    state: present
+  when:
+    - ansible_distribution == "CentOS"
+    - ansible_distribution_major_version = "6"
+
+- name: install npm on centos 7
   package:
     name: nodejs
     state: present
+  when:
+    - ansible_distribution == "CentOS"
+    - ansible_distribution_major_version = "7"
