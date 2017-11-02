@@ -15,3 +15,10 @@
   when:
     - ansible_distribution == "CentOS"
     - ansible_distribution_major_version == "7"
+
+- name: install npm on fedora
+  package:
+    name: npm
+    state: present
+  when:
+    - ansible_distribution == "Fedora"
