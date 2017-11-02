@@ -8,8 +8,8 @@ galaxy_info:
   platforms:
   - name: EL
     versions:
-    - 7
     - 6
+    - 7
 
   galaxy_tags:
     - npm
