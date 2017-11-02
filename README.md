@@ -16,7 +16,7 @@ None known.
 Dependencies
 ------------
 
-epel
+- robertdebock.epel
 
 Example Playbook
 ----------------
