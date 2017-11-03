@@ -23,12 +23,22 @@
   when:
     - ansible_distribution == "Fedora"
 
-- name: install npm on Alpine
+
+- name: install npm on Alpine 3.4 and 3.5
+  package:
+    name: nodejs
+    state: present
+  when:
+    - ansible_distribution == "Alpine"
+    - ( ansible_distribution_major_version == "3.4" or ansible_distribution_major_version == "3.5" )
+
+- name: install npm on Alpine 3.6
   package:
     name: nodejs-npm
     state: present
   when:
     - ansible_distribution == "Alpine"
+    - ansible_distribution_major_version == "3.6"
     
 - name: install npm on Debian or Ubuntu
   package:
