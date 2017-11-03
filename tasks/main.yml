@@ -22,3 +22,17 @@
     state: present
   when:
     - ansible_distribution == "Fedora"
+
+- name: install npm on Alpine
+  package:
+    name: nodejs-npm
+    state: present
+  when:
+    - ansible_distribution == "Alpine"
+    
+- name: install npm on Debian or Ubuntu
+  package:
+    name: nodejs
+    state: present
+  when:
+    - ( ansible_distribution == "Debian" or ansible_distribution == "Ubuntu" )
