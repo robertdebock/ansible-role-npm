@@ -41,12 +41,40 @@
     - ansible_distribution == "Alpine"
     - ansible_distribution_version >= "3.6"
 
-- name: install npm requirements on Debian or Ubuntu
+- name: install npm on Ubuntu
+  package:
+    name: npm
+    state: present
+  when:
+    - ansible_distribution == "Ubuntu"
+
+- name: install npm requirements on Debian
   package:
     name: "{{ item }}"
     state: present
   with_items:
-    - nodejs
-    - npm
+    - curl
+    - gnupg2
   when:
-    - ( ansible_distribution == "Debian" or ansible_distribution == "Ubuntu" )
+    - ansible_distribution == "Debian"
+
+- name: Download nodejs setup on Debian
+  get_url:
+    url: https://deb.nodesource.com/setup_6.x
+    dest: /tmp/setup_6.x
+  when:
+    - ansible_distribution == "Debian"
+
+- name: Run nodejs setup on Debian
+  command: bash /tmp/setup_6.x && touch /tmp/setup_6.x.done
+  args:
+    creates: /tmp/setup_6.x.done
+  when:
+    - ansible_distribution == "Debian"
+
+- name: Install nodejs on Debian
+  package:
+    name: nodejs
+    state: present
+  when:
+    - ansible_distribution == "Debian"
