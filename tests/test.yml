@@ -6,5 +6,5 @@
   tasks:
     - name: install package with npm
       package:
-        name: angular
+        name: debug
         state: present
