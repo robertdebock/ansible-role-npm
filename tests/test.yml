@@ -1,12 +1,12 @@
 ---
 - hosts: localhost
   remote_user: root
-  
+
   roles:
     - npm
 
   tasks:
     - name: install package with npm
-      package:
+      npm:
         name: debug
         global: yes
