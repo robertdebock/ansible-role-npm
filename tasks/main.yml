@@ -31,7 +31,7 @@
   when:
     - ansible_distribution == "Alpine"
     - ansible_distribution_version >= "3.4"
-    - ansible_distribution_version <= "3.5"
+    - ansible_distribution_version <= "3.6"
 
 - name: install npm on Alpine 3.6
   package:
