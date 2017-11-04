@@ -3,3 +3,8 @@
   remote_user: root
   roles:
     - npm
+  tasks:
+    - name: install package with npm
+      package:
+        name: angular
+        state: present
