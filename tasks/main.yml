@@ -34,7 +34,7 @@
 
 - name: install npm
   package:
-    name: npm
+    name: "{{ item }}"
     state: present
   with_items:
     - "{{ packages }}"
