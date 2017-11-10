@@ -1,52 +1,11 @@
 ---
 # tasks file for npm
-- name: install npm on centos 6
-  package:
-    name: npm
-    state: present
-  when:
-    - ansible_distribution == "CentOS"
-    - ansible_distribution_major_version == "6"
-
-- name: install npm on centos 7
-  package:
-    name: nodejs
-    state: present
-  when:
-    - ansible_distribution == "CentOS"
-    - ansible_distribution_major_version == "7"
-
-- name: install npm on fedora
-  package:
-    name: npm
-    state: present
-  when:
-    - ansible_distribution == "Fedora"
-
-
-- name: install npm on Alpine 3.4 and 3.5
-  package:
-    name: nodejs
-    state: present
-  when:
-    - ansible_distribution == "Alpine"
-    - ansible_distribution_version >= "3.4"
-    - ansible_distribution_version <= "3.6"
-
-- name: install npm on Alpine 3.6
-  package:
-    name: nodejs-npm
-    state: present
-  when:
-    - ansible_distribution == "Alpine"
-    - ansible_distribution_version >= "3.6"
-
-- name: install npm on Ubuntu
-  package:
-    name: npm
-    state: present
-  when:
-    - ansible_distribution == "Ubuntu"
+- name: include distribution specific variables
+  include_vars: "{{ item }}"
+  with_first_found:
+    - "{{ ansible_distribution }}-{{ ansible_distribution_major_version}}.yml"
+    - "{{ ansible_distribution }}.yml"
+    - "default.yml"
 
 - name: install npm requirements on Debian
   package:
@@ -72,9 +31,9 @@
   when:
     - ansible_distribution == "Debian"
 
-- name: Install nodejs on Debian
+- name: install npm
   package:
-    name: nodejs
+    name: npm
     state: present
-  when:
-    - ansible_distribution == "Debian"
+  with_items:
+    - "{{ packages }}"
