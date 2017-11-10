@@ -3,7 +3,8 @@
 - name: include distribution specific variables
   include_vars: "{{ item }}"
   with_first_found:
-    - "{{ ansible_distribution }}-{{ ansible_distribution_major_version}}.yml"
+    - "{{ ansible_distribution }}-{{ ansible_distribution_major_version }}.yml"
+    - "{{ ansible_distribution }}-{{ ansible_distribution_version }}.yml"
     - "{{ ansible_distribution }}.yml"
     - "default.yml"
 
@@ -17,14 +18,14 @@
   when:
     - ansible_distribution == "Debian"
 
-- name: Download nodejs setup on Debian
+- name: download nodejs setup on Debian
   get_url:
     url: https://deb.nodesource.com/setup_6.x
     dest: /tmp/setup_6.x
   when:
     - ansible_distribution == "Debian"
 
-- name: Run nodejs setup on Debian
+- name: run nodejs setup on Debian
   command: bash /tmp/setup_6.x && touch /tmp/setup_6.x.done
   args:
     creates: /tmp/setup_6.x.done
