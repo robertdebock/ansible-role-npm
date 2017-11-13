@@ -1,5 +1,5 @@
 ---
-# tasks file for npm
+# tasks file for ansible-role-npm
 - name: include distribution specific variables
   include_vars: "{{ item }}"
   with_first_found:
