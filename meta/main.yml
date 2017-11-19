@@ -11,18 +11,20 @@ galaxy_info:
     - all
   - name: Debian
     versions:
-    - stretch
+    - jessie
+    - buster
   - name: EL
     versions:
     - 6
     - 7
   - name: Fedora
     versions:
-    - 25
     - 26
+    - 27
   - name: Ubuntu
     versions:
     - artful
+    - zesty
 
   galaxy_tags:
     - npm
@@ -34,4 +36,4 @@ galaxy_info:
     - ubuntu
 
 dependencies:
-  - robertdebock.epel
+  - ansible-role-epel

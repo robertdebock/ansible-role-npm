@@ -1,4 +1,4 @@
-NPM
+ansible-role-npm
 =========
 
 Have NPM available on your system.
@@ -17,7 +17,7 @@ None known.
 Dependencies
 ------------
 
-- robertdebock.epel
+- robertdebock.ansible-role-epel
 
 Example Playbook
 ----------------
@@ -28,7 +28,7 @@ Example Playbook
   become: yes
 
   roles:
-     - npm
+     - ansible-role-npm
 
   tasks:
     - name: install package with npm

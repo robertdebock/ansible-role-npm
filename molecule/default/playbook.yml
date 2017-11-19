@@ -1,9 +1,9 @@
 ---
-- hosts: all
-  remote_user: root
+- name: Converge
+  hosts: all
 
   roles:
-    - ansible-role-npm
+    - role: ansible-role-npm
 
   tasks:
     - name: install package with npm

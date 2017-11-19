@@ -26,7 +26,7 @@
     - ansible_distribution == "Debian"
 
 - name: run nodejs setup on Debian
-  command: bash /tmp/setup_6.x && touch /tmp/setup_6.x.done
+  shell: bash /tmp/setup_6.x && touch /tmp/setup_6.x.done
   args:
     creates: /tmp/setup_6.x.done
   when:
