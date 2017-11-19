@@ -1,3 +1,5 @@
 ---
+- name: ansible-role-bootstrap
+  src: robertdebock.ansible-role-bootstrap
 - name: ansible-role-epel
   src: robertdebock.ansible-role-epel
