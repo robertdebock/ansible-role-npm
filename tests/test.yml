@@ -3,7 +3,7 @@
   remote_user: root
 
   roles:
-    - ansible-role-npm
+    - role: ansible-role-npm
 
   tasks:
     - name: install package with npm
