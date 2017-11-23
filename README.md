@@ -1,6 +1,8 @@
 ansible-role-npm
 =========
 
+[![Build Status](https://travis-ci.org/robertdebock/ansible-role-npm.svg?branch=master)](https://travis-ci.org/robertdebock/ansible-role-npm)
+
 Have NPM available on your system.
 
 Requirements
