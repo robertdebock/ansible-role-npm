@@ -21,6 +21,11 @@ Dependencies
 
 - robertdebock.ansible-role-epel
 
+Download the dependencies by issueing this command:
+```
+ansible-galaxy install --role-file requirements.yml
+```
+
 Example Playbook
 ----------------
 
