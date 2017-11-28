@@ -35,7 +35,7 @@ Example Playbook
   become: yes
 
   roles:
-     - ansible-role-npm
+     - robertdebock.ansible-role-npm
 
   tasks:
     - name: install package with npm
@@ -43,6 +43,8 @@ Example Playbook
         name: debug
         global: yes
 ```
+
+Install this role using `galaxy install robertdebock.ansible-role-nginx`.
 
 License
 -------
