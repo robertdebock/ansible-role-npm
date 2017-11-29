@@ -1,4 +1,4 @@
-ansible-role-npm
+npm
 =========
 
 [![Build Status](https://travis-ci.org/robertdebock/ansible-role-npm.svg?branch=master)](https://travis-ci.org/robertdebock/ansible-role-npm)
@@ -19,7 +19,7 @@ None known.
 Dependencies
 ------------
 
-- robertdebock.ansible-role-epel
+- robertdebock.epel
 
 Download the dependencies by issuing this command:
 ```
@@ -35,7 +35,7 @@ Example Playbook
   become: yes
 
   roles:
-     - robertdebock.ansible-role-npm
+     - robertdebock.npm
 
   tasks:
     - name: install package with npm
@@ -44,7 +44,7 @@ Example Playbook
         global: yes
 ```
 
-Install this role using `galaxy install robertdebock.ansible-role-npm`.
+Install this role using `galaxy install robertdebock.npm`.
 
 License
 -------
