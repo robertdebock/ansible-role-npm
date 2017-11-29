@@ -3,7 +3,7 @@
   hosts: all
 
   roles:
-    - role: robertdebock.npm
+    - role: ansible-role-npm
 
   tasks:
     - name: install package with npm
