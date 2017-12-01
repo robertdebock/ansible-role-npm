@@ -34,11 +34,11 @@ galaxy_info:
   galaxy_tags:
     - npm
     - nodejs
-    - alpine
-    - debian
+    - Alpine
+    - Debian
     - rhel
-    - fedora
-    - ubuntu
+    - Fedora
+    - Ubuntu
 
 dependencies:
   - robertdebock.epel
