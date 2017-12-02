@@ -1,0 +1,12 @@
+---
+- name: Converge
+  hosts: all
+
+  roles:
+    - role: ansible-role-npm
+
+  tasks:
+    - name: install package with npm
+      npm:
+        name: debug
+        global: yes
