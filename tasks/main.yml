@@ -37,4 +37,4 @@
     name: "{{ item }}"
     state: present
   with_items:
-    - "{{ packages }}"
+    - "{{ npm_packages }}"
