@@ -3,9 +3,9 @@
 - name: include distribution specific variables
   include_vars: "{{ item }}"
   with_first_found:
-    - "{{ ansible_distribution }}-{{ ansible_distribution_version }}.yml"
-    - "{{ ansible_distribution }}.yml"
-    - "default.yml"
+    - "npm.{{ ansible_distribution }}-{{ ansible_distribution_version }}.yml"
+    - "npm.{{ ansible_distribution }}.yml"
+    - "npm.default.yml"
 
 - name: install npm requirements on Debian
   package:
