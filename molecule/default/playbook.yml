@@ -4,7 +4,7 @@
   gather_facts: no
 
   roles:
-    - role: robertdebock.npm
+    - role: ansible-role-npm
 
   tasks:
     - name: install package with npm
