@@ -1,12 +1,5 @@
 ---
 # tasks file for npm
-- name: include distribution specific variables
-  include_vars: "{{ item }}"
-  with_first_found:
-    - "npm.{{ ansible_distribution }}-{{ ansible_distribution_version }}.yml"
-    - "npm.{{ ansible_distribution }}.yml"
-    - "npm.default.yml"
-
 - name: install npm requirements on Debian
   package:
     name: "{{ item }}"
@@ -36,4 +29,6 @@
     name: "{{ item }}"
     state: present
   with_items:
-    - "{{ npm_packages }}"
+    - "{{ npm_packages[ansible_distribution ~ '-' ~ ansible_distribution_major_version]
+      | default(npm_packages[ansible_distribution]
+      | default(npm_packages['default'] )) }}"
