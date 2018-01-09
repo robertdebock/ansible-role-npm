@@ -29,6 +29,6 @@
     name: "{{ item }}"
     state: present
   with_items:
-    - "{{ npm_packages[ansible_distribution ~ '-' ~ ansible_distribution_major_version]
+    - "{{ npm_packages[ansible_distribution ~ '-' ~ ansible_distribution_version]
       | default(npm_packages[ansible_distribution]
       | default(npm_packages['default'] )) }}"
