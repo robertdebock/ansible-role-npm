@@ -8,29 +8,38 @@ driver:
 lint:
   name: yamllint
 platforms:
-  - name: alpine-3.6
+  - name: npm-archlinux
+    image: base/archlinux
+  - name: npm-alpine-3.6
     image: alpine:3.6
-  - name: alpine-3.7
+  - name: npm-alpine-3.7
     image: alpine:3.7
-  - name: centos-6
+  - name: npm-centos-6
     image: centos:6
-  - name: centos-7
+  - name: npm-centos-7
     image: centos:7
-  - name: debian-jessie
+  - name: npm-debian-jessie
     image: debian:jessie
-  - name: debian-buster
+  - name: npm-debian-stretch
+    image: debian:stretch
+  - name: npm-debian-buster
     image: debian:buster
-  - name: fedora-26
+  - name: npm-fedora-26
     image: fedora:26
-  - name: fedora-27
+  - name: npm-fedora-27
     image: fedora:27
-  - name: opensuse-42.2
+  - name: npm-opensuse-42.2
     image: opensuse:42.2
-  - name: opensuse-42.3
+  - name: npm-opensuse-42.3
     image: opensuse:42.3
-  - name: ubuntu-zesty
-    image: ubuntu:zesty
-  - name: ubuntu-artful
+    # 14.04 LTS
+  - name: npm-ubuntu-trusty
+    image: ubuntu:trusty
+    # 16.04 LTS
+  - name: npm-ubuntu-xenial
+    image: ubuntu:xenial
+    # 17.04
+  - name: npm-ubuntu-artful
     image: ubuntu:artful
 provisioner:
   name: ansible
