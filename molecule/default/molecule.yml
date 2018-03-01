@@ -20,10 +20,6 @@ platforms:
     image: centos:7
   - name: npm-debian-jessie
     image: debian:jessie
-  - name: npm-debian-stretch
-    image: debian:stretch
-  - name: npm-debian-buster
-    image: debian:buster
   - name: npm-fedora-26
     image: fedora:26
   - name: npm-fedora-27
