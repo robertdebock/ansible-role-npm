@@ -1,29 +1,5 @@
 ---
 # tasks file for npm
-- name: install npm requirements on Debian
-  package:
-    name: "{{ item }}"
-    state: present
-  with_items:
-    - curl
-    - gnupg2
-  when:
-    - ansible_distribution == "Debian"
-
-- name: download nodejs setup on Debian
-  get_url:
-    url: https://deb.nodesource.com/setup_6.x
-    dest: /tmp/setup_6.x
-  when:
-    - ansible_distribution == "Debian"
-
-- name: run nodejs setup on Debian
-  shell: bash /tmp/setup_6.x && touch /tmp/setup_6.x.done
-  args:
-    creates: /tmp/setup_6.x.done
-  when:
-    - ansible_distribution == "Debian"
-
 - name: install npm
   package:
     name: "{{ item }}"
