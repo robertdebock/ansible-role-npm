@@ -16,8 +16,6 @@ platforms:
     box: centos/7
   - name: npm-debian-jessie64
     box: debian/jessie64
-  - name: npm-debian-buster64
-    box: desc/buster64
   - name: npm-fedora-26-cloud-base
     box: fedora/26-cloud-base
   - name: npm-fedora-27-cloud-base
