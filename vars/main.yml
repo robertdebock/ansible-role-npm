@@ -23,7 +23,5 @@ npm_packages:
     - nodejs
   Alpine:
     - nodejs-npm
-  Debian:
-    - nodejs
   default:
     - npm
