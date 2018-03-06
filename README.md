@@ -9,7 +9,7 @@ Requirements
 ------------
 
 Access to a repository containing packages, likely on the internet.
-On RHEL (platform: EL) the epel repository is required.
+On RHEL (platform: EL) the EPEL repository is required.
 
 Role Variables
 --------------
@@ -19,6 +19,9 @@ None known.
 Dependencies
 ------------
 
+You can prepare your system using these roles:
+
+- robertdebock.bootstrap
 - robertdebock.epel
 
 Download the dependencies by issuing this command:
@@ -35,7 +38,9 @@ Example Playbook
   become: yes
 
   roles:
-     - robertdebock.npm
+     - role: robertdebock.bootstrap
+     - role: robertdebock.epel
+     - role: robertdebock.npm
 
   tasks:
     - name: install package with npm
