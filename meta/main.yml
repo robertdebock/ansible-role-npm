@@ -1,4 +1,4 @@
----
+--
 galaxy_info:
   author: Robert de Bock
   description: Have NPM available on your system.
@@ -31,8 +31,8 @@ galaxy_info:
         - all
     - name: Ubuntu
       versions:
-        - xenial
         - artful
+        - bionic
 
   galaxy_tags:
     - npm
