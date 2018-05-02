@@ -48,8 +48,8 @@ This role has been tested against the following distributions and Ansible versio
 |archlinux|yes|yes|yes|
 |centos-7|yes|yes|yes|
 |debian-jessie|yes|yes|yes|
-|fedora-26|yes|yes|yes|
 |fedora-27|yes|yes|yes|
+|fedora-28|yes|yes|yes|
 |opensuse-42.2|yes|yes|yes|
 |opensuse-42.3|yes|yes|yes|
 |ubuntu-artful|yes|yes|yes|
