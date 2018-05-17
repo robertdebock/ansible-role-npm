@@ -1,8 +1,8 @@
 ---
 - name: Converge
   hosts: all
-  become: yes
-  gather_facts: no
+  become: true
+  gather_facts: false
 
   roles:
     - role: robertdebock.bootstrap
@@ -13,4 +13,4 @@
     - name: install package with npm
       npm:
         name: debug
-        global: yes
+        global: true
