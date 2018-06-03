@@ -28,8 +28,8 @@ Dependencies
 
 You can prepare your system using these roles:
 
-- robertdebock.bootstrap
-- robertdebock.epel
+- [robertdebock.bootstrap](https://travis-ci.org/robertdebock/ansible-role-bootstrap)
+- [robertdebock.epel](https://travis-ci.org/robertdebock/ansible-role-epel)
 
 Download the dependencies by issuing this command:
 ```
