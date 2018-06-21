@@ -8,14 +8,14 @@ driver:
 lint:
   name: yamllint
 platforms:
-  - name: npm-opensuse-42.2
-    image: opensuse:42.2
+  - name: npm-alpine-latest
+    image: alpine:latest
 provisioner:
   name: ansible
   lint:
     name: ansible-lint
 scenario:
-  name: opensuse-42.2
+  name: alpine-latest
 verifier:
   name: goss
   lint:

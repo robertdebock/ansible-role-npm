@@ -8,14 +8,14 @@ driver:
 lint:
   name: yamllint
 platforms:
-  - name: npm-ubuntu-bionic
-    image: ubuntu:bionic
+  - name: npm-fedora-rawhide
+    image: fedora:rawhide
 provisioner:
   name: ansible
   lint:
     name: ansible-lint
 scenario:
-  name: ubuntu-bionic
+  name: fedora-rawhide
 verifier:
   name: goss
   lint:
