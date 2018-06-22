@@ -13,3 +13,4 @@
       npm:
         name: debug
         global: true
+      become: no
