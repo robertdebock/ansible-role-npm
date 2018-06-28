@@ -1,10 +1,18 @@
 ---
 # tasks file for npm
+- name: load default variables
+  include_vars:
+    file: default.yml
+
+- name: load os-specific variables
+  include_vars: "{{ item }}"
+  with_first_found:
+    - "{{ ansible_distribution }}.yml"
+    - default.yml
+
 - name: install npm
   package:
     name: "{{ item }}"
     state: present
   with_items:
-    - "{{ npm_packages[ansible_distribution ~ '-' ~ ansible_distribution_version]
-      | default(npm_packages[ansible_distribution]
-      | default(npm_packages['default'] )) }}"
+    - "{{ npm_packages }}"
