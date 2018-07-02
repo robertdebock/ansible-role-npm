@@ -38,10 +38,10 @@ galaxy_info:
   galaxy_tags:
     - npm
     - nodejs
-    - Alpine
-    - Debian
+    - alpine
+    - debian
     - rhel
-    - Fedora
-    - Ubuntu
+    - fedora
+    - ubuntu
 
 dependencies: []
