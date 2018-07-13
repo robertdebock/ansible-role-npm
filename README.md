@@ -41,16 +41,19 @@ Compatibility
 
 This role has been tested against the following distributions and Ansible version:
 
-|distribution|ansible 2.3|ansible 2.4|ansible 2.5|
+|distribution|ansible 2.4|ansible 2.5|ansible 2.6|
 |------------|-----------|-----------|-----------|
-|alpine-latest|yes|yes|yes|
 |alpine-edge|yes|yes|yes|
+|alpine-latest|yes|yes|yes|
 |archlinux|yes|yes|yes|
+|centos-6|no|no|no|
 |centos-latest|yes|yes|yes|
+|debian-buster|no|no|no|
+|debian-stretch|no|no|no|
 |fedora-latest|yes|yes|yes|
-|fedora-rawhide|yes|yes|yes|
+|fedora-rawhide|no|no|no|
 |opensuse-leap|yes|yes|yes|
-|opensuse-tumbleweed|yes|yes|yes|
+|opensuse-tumbleweed|no|no|no|
 |ubuntu-artful|yes|yes|yes|
 |ubuntu-latest|yes|yes|yes|
 
