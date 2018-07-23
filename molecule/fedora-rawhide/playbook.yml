@@ -6,7 +6,6 @@
 
   roles:
     - role: robertdebock.bootstrap
-    - role: robertdebock.epel
     - role: ansible-role-npm
 
   tasks:
