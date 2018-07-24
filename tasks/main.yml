@@ -30,8 +30,14 @@
 - name: install nodejs rpm repository
   yum_repository:
     name: nodejs
-    description: NodeJS YUM repo
-    baseurl: https://rpm.nodesource.com/pub_10.x/el/$releasever/$basearch/
+    description: "{{ item.description }}"
+    baseurl: "{{ item.baseurl }}"
+    gpgkey: https://rpm.nodesource.com/pub/el/NODESOURCE-GPG-SIGNING-KEY-EL
+  with_items:
+    - baseurl: "https://rpm.nodesource.com/pub_10.x/el/$releasever/$basearch/"
+      description: Node.js Packages for Enterprise Linux 6 - $basearch
+    - baseurl: https://rpm.nodesource.com/pub_10.x/el/$releasever/SRPMS
+      description: Node.js for Enterprise Linux 6 - $basearch - Source
   when:
     - ansible_distribution == "CentOS"
     - ansible_distribution_major_release == 6
