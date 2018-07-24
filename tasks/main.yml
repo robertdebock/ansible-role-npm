@@ -10,6 +10,10 @@
     - "{{ ansible_distribution }}.yml"
     - default.yml
 
+- name: install nodejs key
+  apt_key:
+    url: https://deb.nodesource.com/gpgkey/nodesource.gpg.key
+
 - name: install nodejs repository
   apt_repository:
     repo: "{{ item }}"
