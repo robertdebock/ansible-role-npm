@@ -18,7 +18,7 @@
     - "deb https://deb.nodesource.com/${NODEREPO} ${DISTRO} main"
     - "deb-src https://deb.nodesource.com/${NODEREPO} ${DISTRO} main"
   when:
-    - ansible_distribution == Debian
+    - ansible_distribution == "Debian"
 
 - name: install npm
   package:
