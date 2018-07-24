@@ -10,6 +10,16 @@
     - "{{ ansible_distribution }}.yml"
     - default.yml
 
+- name: install nodejs repository
+  apt_repository:
+    repo: "{{ item }}"
+    state: present
+  with_items:
+    - "deb https://deb.nodesource.com/${NODEREPO} ${DISTRO} main"
+    - "deb-src https://deb.nodesource.com/${NODEREPO} ${DISTRO} main"
+  when:
+    - ansible_distribution == Debian
+
 - name: install npm
   package:
     name: "{{ item }}"
