@@ -13,7 +13,7 @@
 
 - name: install nodejs key
   apt_key:
-    url: https://deb.nodesource.com/gpgkey/nodesource.gpg.key
+    url: "{{ npm_apt_key }}"
   when:
     - ansible_distribution == "Debian"
 
@@ -22,22 +22,18 @@
     repo: "{{ item }}"
     state: present
   with_items:
-    - "deb https://deb.nodesource.com/node_10.x {{ ansible_distribution_release }} main"
-    - "deb-src https://deb.nodesource.com/node_10.x {{ ansible_distribution_release }} main"
+    - "{{ npm_apt_repositories }}"
   when:
     - ansible_distribution == "Debian"
 
 - name: install nodejs rpm repository
   yum_repository:
-    name: nodejs
+    name: "{{ item.name }}"
     description: "{{ item.description }}"
     baseurl: "{{ item.baseurl }}"
-    gpgkey: https://rpm.nodesource.com/pub/el/NODESOURCE-GPG-SIGNING-KEY-EL
+    gpgkey: "{{ npm_gpg_key }}"
   with_items:
-    - baseurl: "https://rpm.nodesource.com/pub_10.x/el/$releasever/$basearch/"
-      description: Node.js Packages for Enterprise Linux 6 - $basearch
-    - baseurl: https://rpm.nodesource.com/pub_10.x/el/$releasever/SRPMS
-      description: Node.js for Enterprise Linux 6 - $basearch - Source
+    - "{{ npm_yum_repositories }}"
   when:
     - ansible_distribution == "CentOS"
     - ansible_distribution_major_version == "6"
