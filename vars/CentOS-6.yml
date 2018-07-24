@@ -12,4 +12,3 @@ npm_yum_repositories:
   - name: nodejs-source
     baseurl: https://rpm.nodesource.com/pub/el/$releasever/SRPMS/
     description: Node.js for Enterprise Linux 6 - $basearch - Source
-
