@@ -40,7 +40,7 @@
       description: Node.js for Enterprise Linux 6 - $basearch - Source
   when:
     - ansible_distribution == "CentOS"
-    - ansible_distribution_major_version == 6
+    - ansible_distribution_major_version == "6"
 
 - name: install npm
   package:
