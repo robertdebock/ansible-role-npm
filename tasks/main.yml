@@ -10,10 +10,6 @@
     - "{{ ansible_distribution }}.yml"
     - default.yml
 
-- name: install nodejs key
-  apt_key:
-    url: https://deb.nodesource.com/gpgkey/nodesource.gpg.key
-
 - name: install nodejs repository
   apt_repository:
     repo: "{{ item }}"
@@ -23,6 +19,11 @@
     - "deb-src https://deb.nodesource.com/node_10.x {{ ansible_distribution_release }} main"
   when:
     - ansible_distribution == "Debian"
+  notify:
+    - install nodejs key
+
+- name: flush handlers
+  meta: flush_handlers
 
 - name: install npm
   package:
