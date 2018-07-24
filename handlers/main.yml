@@ -1,4 +1,0 @@
----
-- name: install nodejs key
-  apt_key:
-    url: https://deb.nodesource.com/gpgkey/nodesource.gpg.key
