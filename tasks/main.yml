@@ -20,7 +20,6 @@
 - name: install nodejs deb repository
   apt_repository:
     repo: "{{ item }}"
-    state: present
   with_items:
     - "{{ npm_apt_repositories }}"
   when:
@@ -41,6 +40,5 @@
 - name: install npm
   package:
     name: "{{ item }}"
-    state: present
   with_items:
     - "{{ npm_packages }}"
