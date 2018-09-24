@@ -14,12 +14,14 @@
 - name: install nodejs key
   apt_key:
     url: "{{ npm_apt_key }}"
+    state: present
   when:
     - ansible_distribution == "Debian"
 
 - name: install nodejs deb repository
   apt_repository:
     repo: "{{ item }}"
+    state: present
   with_items:
     - "{{ npm_apt_repositories }}"
   when:
@@ -28,6 +30,7 @@
 - name: install nodejs rpm repository
   yum_repository:
     name: "{{ item.name }}"
+    state: present
     description: "{{ item.description }}"
     baseurl: "{{ item.baseurl }}"
     gpgkey: "{{ npm_gpg_key }}"
@@ -40,5 +43,6 @@
 - name: install npm
   package:
     name: "{{ item }}"
+    state: present
   with_items:
     - "{{ npm_packages }}"
