@@ -1,7 +1,14 @@
 ---
 # vars file for npm
 npm_packages:
-  - nodejs
+  default:
+    - npm
+  Alpine:
+    - nodejs-npm
+  CentOS-6:
+    - nodejs
+  Debian:
+    - nodejs
 
 npm_gpg_key: https://rpm.nodesource.com/pub/el/NODESOURCE-GPG-SIGNING-KEY-EL
 
@@ -12,3 +19,9 @@ npm_yum_repositories:
   - name: nodejs-source
     baseurl: https://rpm.nodesource.com/pub/el/$releasever/SRPMS/
     description: Node.js for Enterprise Linux 6 - $basearch - Source
+
+npm_apt_key: https://deb.nodesource.com/gpgkey/nodesource.gpg.key
+
+npm_apt_repositories:
+  - "deb https://deb.nodesource.com/node_10.x {{ ansible_distribution_release }} main"
+  - "deb-src https://deb.nodesource.com/node_10.x {{ ansible_distribution_release }} main"

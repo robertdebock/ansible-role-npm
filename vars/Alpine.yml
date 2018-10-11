@@ -1,4 +1,0 @@
----
-# vars file for npm
-npm_packages:
-  - nodejs-npm
