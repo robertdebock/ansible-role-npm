@@ -4,8 +4,8 @@
   gather_facts: false
 
   roles:
-    - role: robertdebock.bootstrap
-    - role: ansible-role-npm
+    - robertdebock.bootstrap
+    - ansible-role-npm
 
   tasks:
     - name: install package with npm

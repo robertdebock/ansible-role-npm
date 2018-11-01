@@ -2,11 +2,14 @@
 - name: Converge
   hosts: all
   gather_facts: false
-  become: true
 
   roles:
-    - role: ansible-role-bootstrap
+    - robertdebock.bootstrap
+    - robertdebock.epel
+    - ansible-role-npm
 
   tasks:
-    - name: test connection
-      ping:
+    - name: install package with npm
+      npm:
+        name: debug
+        global: true

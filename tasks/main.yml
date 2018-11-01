@@ -31,7 +31,5 @@
 
 - name: install npm
   package:
-    name: "{{ npm_packages[ansible_distribution ~ '-' ~ ansible_distribution_major_version]
-          | default(npm_packages[ansible_distribution]
-          | default(npm_packages['default'])) }}"
+    name: "{{ npm_packages }}"
     state: "{{ npm_package_state }}"

@@ -1,6 +1,6 @@
 ---
 # vars file for npm
-npm_packages:
+_npm_packages:
   default:
     - npm
   Alpine:
@@ -9,6 +9,8 @@ npm_packages:
     - nodejs
   Debian:
     - nodejs
+
+npm_packages: "{{ _npm_packages[ansible_distribution ~ '-' ~ ansible_distribution_major_version] | default(_npm_packages[ansible_distribution] | default(_npm_packages['default'])) }}"
 
 npm_gpg_key: https://rpm.nodesource.com/pub/el/NODESOURCE-GPG-SIGNING-KEY-EL
 
