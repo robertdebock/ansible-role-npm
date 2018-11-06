@@ -2,7 +2,7 @@
 galaxy_info:
   author: Robert de Bock
   role_name: npm
-  description: Have NPM available on your system.
+  description: The purpose of this role is to install npm on your system.
   license: Apache-2.0
   company: none
   min_ansible_version: 2.4

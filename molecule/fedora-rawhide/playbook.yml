@@ -1,11 +1,12 @@
 ---
 - name: Converge
   hosts: all
-  gather_facts: false
-  become: no
+  gather_facts: no
+  become: yes
 
   roles:
     - robertdebock.bootstrap
+    - robertdebock.epel
     - ansible-role-npm
 
   tasks:

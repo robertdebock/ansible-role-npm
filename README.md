@@ -3,8 +3,7 @@ npm
 
 [![Build Status](https://travis-ci.org/robertdebock/ansible-role-npm.svg?branch=master)](https://travis-ci.org/robertdebock/ansible-role-npm)
 
-Have NPM available on your system.
-
+The purpose of this role is to install npm on your system.
 
 Example Playbook
 ----------------
