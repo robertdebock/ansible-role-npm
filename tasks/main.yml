@@ -6,6 +6,9 @@
     state: present
   when:
     - ansible_distribution == "Debian"
+  register: npm_install_nodejs_key
+  until: npm_install_nodejs_key
+  retries: 3
 
 - name: install nodejs deb repository
   apt_repository:
@@ -33,3 +36,6 @@
   package:
     name: "{{ npm_packages }}"
     state: "{{ npm_package_state }}"
+  register: npm_install_npm
+  until: npm_install_npm
+  retries: 3
