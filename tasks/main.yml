@@ -31,6 +31,8 @@
   when:
     - ansible_distribution == "CentOS"
     - ansible_distribution_major_version == "6"
+  loop_control:
+    label: "{{ item.name }}"
 
 - name: install npm
   package:
