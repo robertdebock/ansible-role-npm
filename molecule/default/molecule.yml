@@ -32,8 +32,6 @@ platforms:
     image: fedora:rawhide
   - name: npm-opensuse-leap
     image: opensuse:leap
-  - name: npm-opensuse-tumbleweed
-    image: opensuse:tumbleweed
   - name: npm-ubuntu-latest
     image: ubuntu:latest
   - name: npm-ubuntu-rolling
