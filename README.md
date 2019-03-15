@@ -25,7 +25,6 @@ This example is taken from `molecule/default/playbook.yml`:
       npm:
         name: debug
         global: true
-
 ```
 
 Also see a [full explanation and example](https://robertdebock.nl/how-to-use-these-roles.html) on how to use these roles.
@@ -37,10 +36,6 @@ These variables are set in `defaults/main.yml`:
 ```yaml
 ---
 # defaults file for npm
-
-# To update all packages installed by this roles, set `npm_package_state` to `latest`.
-npm_package_state: present
-
 ```
 
 Requirements

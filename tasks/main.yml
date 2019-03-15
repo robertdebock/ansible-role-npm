@@ -37,7 +37,7 @@
 - name: install npm
   package:
     name: "{{ npm_packages }}"
-    state: "{{ npm_package_state }}"
+    state: present
   register: npm_install_npm
   until: npm_install_npm
   retries: 3
