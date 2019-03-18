@@ -1,14 +1,14 @@
 ---
-- name: Converge
+- name: Prepare
   hosts: all
-  gather_facts: false
+  gather_facts: no
 
   roles:
     - robertdebock.bootstrap
-    - ansible-role-npm
+    - robertdebock.epel
 
   tasks:
     - name: install package with npm
       npm:
         name: debug
-        global: true
+        global: yes
