@@ -6,9 +6,3 @@
   roles:
     - robertdebock.bootstrap
     - robertdebock.epel
-
-  tasks:
-    - name: install package with npm
-      npm:
-        name: debug
-        global: yes
