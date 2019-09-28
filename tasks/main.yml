@@ -1,5 +1,13 @@
 ---
 # tasks file for npm
+- name: install requirements
+  package:
+    name: "{{ npm_requirements }}"
+    state: present
+  register: npm_instal_requirements
+  until: npm_instal_requirements is succeeded
+  retries: 3
+
 - name: install nodejs key
   apt_key:
     url: "{{ npm_apt_key }}"
