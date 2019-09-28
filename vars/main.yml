@@ -10,6 +10,9 @@ _npm_packages:
   Debian:
     - nodejs
     - gnupg
+  Ubuntu:
+    - npm
+    - gnupg
 
 npm_packages: "{{ _npm_packages[ansible_distribution ~ '-' ~ ansible_distribution_major_version] | default(_npm_packages[ansible_distribution] | default(_npm_packages['default'])) }}"
 
