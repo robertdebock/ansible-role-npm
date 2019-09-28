@@ -5,7 +5,7 @@ _npm_requirements:
   Debian:
     - gnupg
 
-npm_requirements: "{{ _npm_requirements[ansible_os_family] }}"
+npm_requirements: "{{ _npm_requirements[ansible_os_family] | default(_npm_requirements['default']) }}"
 
 _npm_packages:
   default:
