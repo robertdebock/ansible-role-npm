@@ -1,12 +1,5 @@
 ---
 # vars file for npm
-_npm_requirements:
-  default: []
-  Debian:
-    - gnupg
-
-npm_requirements: "{{ _npm_requirements[ansible_os_family] | default(_npm_requirements['default']) }}"
-
 _npm_packages:
   default:
     - npm
