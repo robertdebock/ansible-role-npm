@@ -4,6 +4,7 @@
   apt_key:
     url: "{{ npm_apt_key }}"
     state: present
+    validate_certs: "{{ npm_validate_certs }}"
   when:
     - ansible_distribution == "Debian"
   register: npm_install_nodejs_key
