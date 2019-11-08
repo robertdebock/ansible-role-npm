@@ -42,3 +42,10 @@
   register: npm_install_npm
   until: npm_install_npm is succeeded
   retries: 3
+
+- name: set the registry
+  lineinfile:
+    path: /usr/etc/npmrc
+    regexp: "^registry="
+    line: "registry={{ npm_registry }}"
+    create: yes

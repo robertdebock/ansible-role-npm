@@ -19,12 +19,6 @@ This example is taken from `molecule/resources/playbook.yml`:
 
   roles:
     - robertdebock.npm
-
-  tasks:
-    - name: install package with npm
-      npm:
-        name: debug
-        global: yes
 ```
 
 The machine you are running this on, may need to be prepared.
@@ -50,6 +44,11 @@ These variables are set in `defaults/main.yml`:
 ```yaml
 ---
 # defaults file for npm
+_npm_registry:
+  default: "https://registry.npmjs.org/"
+  Amazon: "http://registry.npmjs.org/"
+
+npm_registry: "{{ _npm_registry[ansible_distribution] | default(_npm_registry['default']) }}"
 ```
 
 Requirements
@@ -147,6 +146,7 @@ This role uses the following modules:
 ---
 - apt_key
 - apt_repository
+- lineinfile
 - package
 - yum_repository
 ```

@@ -1,2 +1,7 @@
 ---
 # defaults file for npm
+_npm_registry:
+  default: "https://registry.npmjs.org/"
+  Amazon: "http://registry.npmjs.org/"
+
+npm_registry: "{{ _npm_registry[ansible_distribution] | default(_npm_registry['default']) }}"
