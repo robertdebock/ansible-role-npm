@@ -13,9 +13,10 @@ _npm_packages:
     - nodejs-npm
   Debian:
     - nodejs
+  Ubuntu:
     - npm
 
-npm_packages: "{{ _npm_packages[ansible_os_family] | default(_npm_packages['default']) }}"
+npm_packages: "{{ _npm_packages[ansible_distribution] | default(_npm_packages['default']) }}"
 
 npm_gpg_key: https://rpm.nodesource.com/pub/el/NODESOURCE-GPG-SIGNING-KEY-EL
 
