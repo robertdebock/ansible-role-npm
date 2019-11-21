@@ -40,6 +40,5 @@ galaxy_info:
     - npm
     - nodejs
     - rhel
-    - ubuntu
 
 dependencies: []
