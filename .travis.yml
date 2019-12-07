@@ -21,6 +21,8 @@ env:
     # - namespace="archlinux" image="base"
     - image="debian" tag="unstable"
     - image="debian"
+    - image="redhat" tag="7"
+    - image="redhat"
     - image="fedora"
     - image="fedora" tag="rawhide"
     - image="opensuse"
