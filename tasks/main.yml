@@ -15,8 +15,7 @@
   apt_repository:
     repo: "{{ item }}"
     state: present
-  with_items:
-    - "{{ npm_apt_repositories }}"
+  loop: "{{ npm_apt_repositories }}"
   when:
     - ansible_distribution == "Debian"
 
@@ -27,8 +26,7 @@
     description: "{{ item.description }}"
     baseurl: "{{ item.baseurl }}"
     gpgkey: "{{ npm_gpg_key }}"
-  with_items:
-    - "{{ npm_yum_repositories }}"
+  loop: "{{ npm_yum_repositories }}"
   when:
     - ansible_distribution == "CentOS"
     - ansible_distribution_major_version == "6"
