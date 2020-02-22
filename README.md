@@ -104,7 +104,7 @@ This role has been tested on these [container images](https://hub.docker.com/):
 |---------|----|
 |amazon|all|
 |alpine|all|
-|debian|all|
+|debian|buster|
 |el|7, 8|
 |fedora|all|
 |opensuse|all|
@@ -116,6 +116,14 @@ The minimum version of Ansible required is 2.8 but tests have been done to:
 - The current version.
 - The development version.
 
+Exceptions
+----------
+
+Some variarations of the build matrix do not work. These are the variations and reasons why the build won't work:
+
+| variation                 | reason                 |
+|---------------------------|------------------------|
+| debian:testing | The repository 'https://deb.nodesource.com/node_10.x bullseye Release' does not have a Release file. |
 
 
 Testing
