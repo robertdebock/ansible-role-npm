@@ -1,14 +1,12 @@
-npm
-=========
+# npm
 
 Install npm on your system.
 
 |Travis|GitHub|Quality|Downloads|
 |------|------|-------|---------|
-|[![travis](https://travis-ci.org/robertdebock/ansible-role-npm.svg?branch=master)](https://travis-ci.org/robertdebock/ansible-role-npm)|[![github](https://github.com/robertdebock/ansible-role-npm/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-npm/actions)|![quality](https://img.shields.io/ansible/quality/21644)|![downloads](https://img.shields.io/ansible/role/d/21644)|
+|[![travis](https://travis-ci.com/robertdebock/ansible-role-npm.svg?branch=master)](https://travis-ci.com/robertdebock/ansible-role-npm)|[![github](https://github.com/robertdebock/ansible-role-npm/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-npm/actions)|[![quality](https://img.shields.io/ansible/quality/21644)](https://galaxy.ansible.com/robertdebock/npm)|[![downloads](https://img.shields.io/ansible/role/d/21644)](https://galaxy.ansible.com/robertdebock/npm)|
 
-Example Playbook
-----------------
+## Example Playbook
 
 This example is taken from `molecule/resources/converge.yml` and is tested on each push, pull request and release.
 ```yaml
@@ -56,8 +54,7 @@ For verification `molecule/resources/verify.yml` run after the role has been app
 
 Also see a [full explanation and example](https://robertdebock.nl/how-to-use-these-roles.html) on how to use these roles.
 
-Role Variables
---------------
+## Role Variables
 
 These variables are set in `defaults/main.yml`:
 ```yaml
@@ -70,8 +67,7 @@ _npm_registry:
 npm_registry: "{{ _npm_registry[ansible_distribution] | default(_npm_registry['default']) }}"
 ```
 
-Requirements
-------------
+## Requirements
 
 - Access to a repository containing packages, likely on the internet.
 - A recent version of Ansible. (Tests run on the current, previous and next release of Ansible.)
@@ -86,17 +82,14 @@ The following roles can be installed to ensure all requirements are met, using `
 
 ```
 
-Context
--------
+## Context
 
 This role is a part of many compatible roles. Have a look at [the documentation of these roles](https://robertdebock.nl/) for further information.
 
 Here is an overview of related roles:
 ![dependencies](https://raw.githubusercontent.com/robertdebock/drawings/artifacts/npm.png "Dependency")
 
-
-Compatibility
--------------
+## Compatibility
 
 This role has been tested on these [container images](https://hub.docker.com/):
 
@@ -116,8 +109,7 @@ The minimum version of Ansible required is 2.8 but tests have been done to:
 - The current version.
 - The development version.
 
-Exceptions
-----------
+## Exceptions
 
 Some variarations of the build matrix do not work. These are the variations and reasons why the build won't work:
 
@@ -126,10 +118,9 @@ Some variarations of the build matrix do not work. These are the variations and 
 | debian:testing | The repository 'https://deb.nodesource.com/node_10.x bullseye Release' does not have a Release file. |
 
 
-Testing
--------
+## Testing
 
-[Unit tests](https://travis-ci.org/robertdebock/ansible-role-npm) are done on every commit, pull request, release and periodically.
+[Unit tests](https://travis-ci.com/robertdebock/ansible-role-npm) are done on every commit, pull request, release and periodically.
 
 If you find issues, please register them in [GitHub](https://github.com/robertdebock/ansible-role-npm/issues)
 
@@ -161,13 +152,11 @@ image="centos" tox
 image="debian" tag="stable" tox
 ```
 
-License
--------
+## License
 
 Apache-2.0
 
 
-Author Information
-------------------
+## Author Information
 
 [Robert de Bock](https://robertdebock.nl/)
