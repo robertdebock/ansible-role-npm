@@ -2,9 +2,9 @@
 
 Install npm on your system.
 
-|Travis|GitHub|Quality|Downloads|
-|------|------|-------|---------|
-|[![travis](https://travis-ci.com/robertdebock/ansible-role-npm.svg?branch=master)](https://travis-ci.com/robertdebock/ansible-role-npm)|[![github](https://github.com/robertdebock/ansible-role-npm/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-npm/actions)|[![quality](https://img.shields.io/ansible/quality/21644)](https://galaxy.ansible.com/robertdebock/npm)|[![downloads](https://img.shields.io/ansible/role/d/21644)](https://galaxy.ansible.com/robertdebock/npm)|
+|Travis|GitHub|Quality|Downloads|Version|
+|------|------|-------|---------|-------|
+|[![travis](https://travis-ci.com/robertdebock/ansible-role-npm.svg?branch=master)](https://travis-ci.com/robertdebock/ansible-role-npm)|[![github](https://github.com/robertdebock/ansible-role-npm/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-npm/actions)|[![quality](https://img.shields.io/ansible/quality/21644)](https://galaxy.ansible.com/robertdebock/npm)|[![downloads](https://img.shields.io/ansible/role/d/21644)](https://galaxy.ansible.com/robertdebock/npm)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-npm.svg)](https://github.com/robertdebock/ansible-role-npm/releases/)|
 
 ## [Example Playbook](#example-playbook)
 
