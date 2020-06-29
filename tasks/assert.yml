@@ -1,0 +1,6 @@
+---
+- name: test if npm_registry is set correctly
+  assert:
+    that:
+      - npm_registry is defined
+      - npm_registry | length > 0
