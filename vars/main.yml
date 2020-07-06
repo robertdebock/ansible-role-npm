@@ -1,5 +1,6 @@
 ---
 # vars file for npm
+
 _npm_validate_certs:
   default: yes
   Debian: no
@@ -33,3 +34,8 @@ npm_apt_key: https://deb.nodesource.com/gpgkey/nodesource.gpg.key
 npm_apt_repositories:
   - "deb https://deb.nodesource.com/node_10.x {{ ansible_distribution_release }} main"
   - "deb-src https://deb.nodesource.com/node_10.x {{ ansible_distribution_release }} main"
+
+# The npm_registry is set in `defaults/main.yml`, bases on this mapping.
+_npm_registry:
+  default: "https://registry.npmjs.org/"
+  Amazon: "http://registry.npmjs.org/"

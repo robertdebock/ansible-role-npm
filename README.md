@@ -60,10 +60,9 @@ These variables are set in `defaults/main.yml`:
 ```yaml
 ---
 # defaults file for npm
-_npm_registry:
-  default: "https://registry.npmjs.org/"
-  Amazon: "http://registry.npmjs.org/"
 
+# The npm_registry is mapped in `vars/main.yml` to a usable default,
+# you can overwrite it here if required.
 npm_registry: "{{ _npm_registry[ansible_distribution] | default(_npm_registry['default']) }}"
 ```
 
