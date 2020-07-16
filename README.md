@@ -47,9 +47,6 @@ For verification `molecule/resources/verify.yml` run after the role has been app
       npm:
         name: debug
         global: yes
-      register: npm_install_package_with_npm
-      until: npm_install_package_with_npm is succeeded
-      retries: 3
 ```
 
 Also see a [full explanation and example](https://robertdebock.nl/how-to-use-these-roles.html) on how to use these roles.
