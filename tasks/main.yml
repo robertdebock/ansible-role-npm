@@ -10,9 +10,6 @@
     validate_certs: "{{ npm_validate_certs }}"
   when:
     - ansible_distribution == "Debian"
-  register: npm_install_nodejs_key
-  until: npm_install_nodejs_key is succeeded
-  retries: 3
 
 - name: install nodejs deb repository
   apt_repository:
@@ -40,9 +37,6 @@
   package:
     name: "{{ npm_packages }}"
     state: present
-  register: npm_install_npm
-  until: npm_install_npm is succeeded
-  retries: 3
 
 - name: set the registry
   lineinfile:

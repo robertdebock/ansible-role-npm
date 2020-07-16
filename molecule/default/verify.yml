@@ -9,6 +9,3 @@
       npm:
         name: debug
         global: yes
-      register: npm_install_package_with_npm
-      until: npm_install_package_with_npm is succeeded
-      retries: 3
