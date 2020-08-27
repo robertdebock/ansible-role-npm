@@ -44,3 +44,4 @@
     regexp: "^registry="
     line: "registry={{ npm_registry }}"
     create: yes
+    mode: "0644"
