@@ -14,8 +14,6 @@ _npm_packages:
     - nodejs-npm
   Debian:
     - nodejs
-  openSUSE Leap:
-    - nodejs
   Ubuntu:
     - npm
 
