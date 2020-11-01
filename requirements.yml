@@ -1,4 +1,5 @@
 ---
-- robertdebock.bootstrap
-- robertdebock.ca_certificates
-- robertdebock.epel
+roles:
+  - name: robertdebock.bootstrap
+  - name: robertdebock.ca_certificates
+  - name: robertdebock.epel
