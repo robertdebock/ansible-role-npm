@@ -3,5 +3,4 @@
   assert:
     that:
       - npm_registry is defined
-      - npm_registry | length > 0
     quiet: yes
