@@ -1,4 +1,5 @@
 ---
+
 - name: test if npm_registry is set correctly
   assert:
     that:
