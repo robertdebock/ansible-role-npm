@@ -2,9 +2,9 @@
 
 Install npm on your system.
 
-|Travis|GitHub|Quality|Downloads|Version|
-|------|------|-------|---------|-------|
-|[![travis](https://travis-ci.com/robertdebock/ansible-role-npm.svg?branch=master)](https://travis-ci.com/robertdebock/ansible-role-npm)|[![github](https://github.com/robertdebock/ansible-role-npm/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-npm/actions)|[![quality](https://img.shields.io/ansible/quality/21644)](https://galaxy.ansible.com/robertdebock/npm)|[![downloads](https://img.shields.io/ansible/role/d/21644)](https://galaxy.ansible.com/robertdebock/npm)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-npm.svg)](https://github.com/robertdebock/ansible-role-npm/releases/)|
+|Travis|GitHub|GitLab|Quality|Downloads|Version|
+|------|------|------|-------|---------|-------|
+|[![travis](https://travis-ci.com/robertdebock/ansible-role-npm.svg?branch=master)](https://travis-ci.com/robertdebock/ansible-role-npm)|[![github](https://github.com/robertdebock/ansible-role-npm/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-npm/actions)|[![gitlab](https://gitlab.com/robertdebock/ansible-role-npm/badges/master/pipeline.svg)](https://gitlab.com/robertdebock/ansible-role-npm)|[![quality](https://img.shields.io/ansible/quality/21644)](https://galaxy.ansible.com/robertdebock/npm)|[![downloads](https://img.shields.io/ansible/role/d/21644)](https://galaxy.ansible.com/robertdebock/npm)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-npm.svg)](https://github.com/robertdebock/ansible-role-npm/releases/)|
 
 ## [Example Playbook](#example-playbook)
 
@@ -52,6 +52,7 @@ npm_registry: "{{ _npm_registry[ansible_distribution] | default(_npm_registry['d
 
 - Access to a repository containing packages, likely on the internet.
 - A recent version of Ansible. (Tests run on the current, previous and next release of Ansible.)
+- Jinja 2.11.2 or above.
 
 ## [Status of requirements](#status-of-requirements)
 
