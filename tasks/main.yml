@@ -5,19 +5,19 @@
   include_tasks: assert.yml
   run_once: yes
 
-- name: install nodejs key
-  apt_key:
-    url: "{{ npm_apt_key }}"
-    state: present
-    validate_certs: "{{ npm_validate_certs }}"
-  when:
-    - ansible_distribution == "Debian"
+- name: configure debian
+  block:
+    - name: install nodejs key
+      apt_key:
+        url: "{{ npm_apt_key }}"
+        state: present
+        validate_certs: "{{ npm_validate_certs }}"
 
-- name: install nodejs deb repository
-  apt_repository:
-    repo: "{{ item }}"
-    state: present
-  loop: "{{ npm_apt_repositories }}"
+    - name: install nodejs deb repository
+      apt_repository:
+        repo: "{{ item }}"
+        state: present
+      loop: "{{ npm_apt_repositories }}"
   when:
     - ansible_distribution == "Debian"
 
