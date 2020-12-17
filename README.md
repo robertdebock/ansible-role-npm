@@ -80,7 +80,7 @@ This role has been tested on these [container images](https://hub.docker.com/u/r
 |el|7, 8|
 |debian|buster|
 |fedora|all|
-|ubuntu|focal, bionic, xenial|
+|ubuntu|focal, bionic|
 
 The minimum version of Ansible required is 2.9, tests have been done to:
 
@@ -134,6 +134,10 @@ image="debian" tag="stable" tox
 ## [License](#license)
 
 Apache-2.0
+
+## [Contributors](#contributors)
+
+I'd like to thank everybody that made contributions to this repository. It motivates me, improves the code and is just fun to collaborate.
 
 
 ## [Author Information](#author-information)
