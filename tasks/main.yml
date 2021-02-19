@@ -23,7 +23,7 @@
     - ansible_distribution == "Debian"
 
 - name: install nodejs rpm repository
-  yum_repository:
+  ansible.builtin.yum_repository:
     name: "{{ item.name }}"
     state: present
     description: "{{ item.description }}"
@@ -37,12 +37,12 @@
     label: "{{ item.name }}"
 
 - name: install npm
-  package:
+  ansible.builtin.package:
     name: "{{ npm_packages }}"
     state: present
 
 - name: set the registry
-  lineinfile:
+  ansible.builtin.lineinfile:
     path: /usr/etc/npmrc
     regexp: "^registry="
     line: "registry={{ npm_registry }}"
