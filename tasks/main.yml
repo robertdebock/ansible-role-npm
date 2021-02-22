@@ -9,13 +9,13 @@
 - name: configure debian
   block:
     - name: install nodejs key
-      apt_key:
+      ansible.builtin.apt_key:
         url: "{{ npm_apt_key }}"
         state: present
         validate_certs: "{{ npm_validate_certs }}"
 
     - name: install nodejs deb repository
-      apt_repository:
+      ansible.builtin.apt_repository:
         repo: "{{ item }}"
         state: present
       loop: "{{ npm_apt_repositories }}"
