@@ -6,6 +6,6 @@
 
   tasks:
     - name: install package with npm
-      npm:
+      community.general.npm:
         name: debug
         global: yes
