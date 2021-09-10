@@ -45,7 +45,7 @@ These variables are set in `defaults/main.yml`:
 
 # The npm_registry is mapped in `vars/main.yml` to a usable default,
 # you can overwrite it here if required.
-npm_registry: "{{ _npm_registry[ansible_distribution] | default(_npm_registry['default']) }}"
+npm_registry: "{{ _npm_registry[ansible_distribution] | default(_npm_registry['default'] ) }}"
 ```
 
 ## [Requirements](#requirements)
