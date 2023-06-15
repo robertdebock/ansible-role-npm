@@ -1,5 +1,14 @@
 ---
 
+- name: assert | Test if npm_version is set correctly
+  ansible.builtin.assert:
+    that:
+      - npm_version is defined
+      - npm_version is number
+      - npm_version is not none
+      - npm_version in [ 16, 18, 19, 20 ]
+    quiet: yes
+
 - name: assert | Test if npm_registry is set correctly
   ansible.builtin.assert:
     that:

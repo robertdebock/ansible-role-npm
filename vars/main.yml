@@ -14,7 +14,7 @@ npm_gpg_key: "https://rpm.nodesource.com/pub/el/NODESOURCE-GPG-SIGNING-KEY-EL"
 
 npm_yum_repositories:
   - name: nodejs
-    baseurl: "https://rpm.nodesource.com/pub_10.x/el/$releasever/$basearch/"
+    baseurl: "https://rpm.nodesource.com/pub_{{ npm_version }}.x/el/$releasever/$basearch/"
     description: Node.js Packages for Enterprise Linux 6 - $basearch
   - name: nodejs-source
     baseurl: "https://rpm.nodesource.com/pub/el/$releasever/SRPMS/"
@@ -23,8 +23,8 @@ npm_yum_repositories:
 npm_apt_key: "https://deb.nodesource.com/gpgkey/nodesource.gpg.key"
 
 npm_apt_repositories:
-  - "deb https://deb.nodesource.com/node_10.x {{ ansible_distribution_release }} main"
-  - "deb-src https://deb.nodesource.com/node_10.x {{ ansible_distribution_release }} main"
+  - "deb https://deb.nodesource.com/node_{{ npm_version }}.x {{ ansible_distribution_release }} main"
+  - "deb-src https://deb.nodesource.com/node_{{ npm_version }}.x {{ ansible_distribution_release }} main"
 
 # The npm_registry is set in `defaults/main.yml`, bases on this mapping.
 _npm_registry:
