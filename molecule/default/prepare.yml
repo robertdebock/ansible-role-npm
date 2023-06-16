@@ -6,5 +6,5 @@
 
   roles:
     - role: robertdebock.bootstrap
-    - role: robertdebock.ca_certificates
-    - role: robertdebock.epel
+    # - role: robertdebock.ca_certificates
+    # - role: robertdebock.epel

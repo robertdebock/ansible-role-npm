@@ -1,10 +1,4 @@
 ---
 # defaults file for npm
 
-# The major version of nodejs listed on https://github.com/nodesource/distributions
-# Pick any of `16`, `18`, `19` or `20`.
-npm_version: 20
-
-# The npm_registry is mapped in `vars/main.yml` to a usable default,
-# you can overwrite it here if required.
-npm_registry: "{{ _npm_registry[ansible_distribution] | default(_npm_registry['default']) }}"
+npm_registry: "https://registry.npmjs.org/"
